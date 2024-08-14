@@ -60,6 +60,7 @@ nav ul li a:hover {
     animation-duration: .5s;
 }
 .hamburger {
+    margin-right: 1rem;
     color: #fff;
     font-size: 1.5rem;
     display: none;
@@ -151,7 +152,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 .fila .col {
-    max-width: 280px;
+    max-width: 200px;
     border: 2px solid #fff;
     padding: 40px 30px;
     text-align: center;
@@ -371,6 +372,12 @@ input, textarea {
     text-transform: uppercase;
     padding: 10px 20px;
     border: .5px solid #d4d4d4;
+    transition: .8s;
+}
+.boton:hover {
+    background-color: #d4d4d4;
+    color: #000;
+    font-weight: 600;
 }
 /*FOOTER*/
 footer {
@@ -477,6 +484,22 @@ footer .arriba {
         color: white;
         text-shadow: 2px 1px 0 #c11e1e;
     }
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100vh; 
+    }
+    .slide {
+        display: none; 
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     .texto h3 {
         font-size: 2rem;
     }
@@ -499,7 +522,7 @@ footer .arriba {
         padding: 80px 0;
     }
     .contain-contacto {
-        max-width: 350px;
+        max-width: 370px;
         margin: auto;
     }
     #sucursales h2 {
