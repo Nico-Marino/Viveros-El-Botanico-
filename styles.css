@@ -1,0 +1,514 @@
+/*FUENTE*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*ENCABEZADO*/
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    width: 65px;
+    animation: bounceInLeft;
+    animation-duration: 1s;
+    margin: 10px 0 0 12px;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-inline: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.2rem;
+}
+nav ul li a:hover {
+    animation: flash;
+    animation-duration: .5s;
+}
+.redes a {
+    color: #fff;
+    margin-inline: .6rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: .5s;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.redes a i {
+    animation: backInRight;
+    animation-duration: 3s;
+}
+.redes a:hover{
+    animation: flash;
+    animation-duration: .5s;
+}
+.hamburger {
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+    cursor:pointer;
+}
+.item1 {
+    animation-delay: .3s;
+}
+.item2 {
+    animation-delay: .6s;
+}
+.item3 {
+    animation-delay: .9s;
+}
+.item4 {
+    animation-delay: 1.2s;
+}
+/*INICIO*/
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+}
+.slide {
+    display: none; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.texto h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    transition: 3s;
+}
+.texto h3:hover {
+    color: #c11e1e;
+    text-shadow: 1px 1px 20px white;
+    cursor: pointer;
+}
+.texto p {
+    font-size: 1.5rem;
+}
+.active {
+    display: block;
+}
+/*SUCURSALES*/
+#sucursales {
+    background-color: #000;
+    color: aliceblue;
+    padding: 100px 0;
+}
+#sucursales h2 {
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px #d4d4d4;
+    margin-bottom: 20px;
+}
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.boton a {
+    text-decoration: none;
+    color: #d4d4d4;
+}
+#sucursales button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+.fila {
+    display: flex;
+    justify-content: center;
+}
+.fila .col {
+    max-width: 280px;
+    border: 2px solid #fff;
+    padding: 40px 30px;
+    text-align: center;
+    transition: .4s;
+    margin: 25px;
+}
+.fila .col:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,255,255,.8);
+}
+.fila .col .info {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.3rem;
+}
+.fila .col .info span {
+    display: block;
+    color: #d4d4d4;
+    transition: .5s;
+}
+.fila .col p {
+    font-size: 1.2rem;
+}
+.fila .col a {
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: .5s;
+}
+.fila .col a:hover {
+    color: #c11e1e;
+}
+.fila .col .info i {
+    margin-bottom: 15px;
+}
+/*PRODUCTOS*/
+#productos {
+    background-color: #212529;
+    padding: 100px 0;
+}
+#productos h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px #d4d4d4;
+    margin-bottom: 20px;
+}
+.gallery-container {
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 20px;
+}
+.gallery_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery_item {
+    position: relative;
+    transition: .5s;
+}
+.gallery_item:hover {
+    transform: scale(1) translateY(-12px);
+    box-shadow: 0 0 15px white;
+}
+.gallery_title {
+    position: absolute;
+    bottom: 125px;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.gallery_item a {
+    color: white;
+    text-decoration: none;
+}
+.gallery_item:nth-child(1) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.gallery_item:nth-child(2) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.gallery_item:nth-child(3) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.gallery_item:nth-child(4) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+/*CARRITO*/
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+}
+.img_productos {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+.contenedor > div {
+    transition: all 0.1s;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.75);
+    background-color: #fefeff;
+    border-radius: 20px;
+}
+.contenedor > div:hover {
+    transform: scale(1) translateY(-12px);
+}
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor .informacion h2 {
+    color: #c41d1c;
+    text-align: center;
+}
+.contenedor .informacion p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 5px;
+}
+.contenedor .informacion button {
+    background-color: #2c4836;
+    color: #fefeff;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: #fefeff;
+    transition: .6s;
+}
+.contenedor .informacion button:hover {
+    color: #2c4836;
+    font-weight: bold;
+    background-color: #3a6448;
+    color: #fefeff;
+}
+.boton-volver {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-volver a {
+    text-decoration: none;
+    color: #c41d1c;
+    font-size: 1.2rem;
+    transition: .5s;
+}
+.boton-volver a:hover {
+    animation: flash;
+    animation-duration: 1s;
+}
+.title_productos {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 1px #a3b18a;
+}
+/*CONTACTO*/
+#contacto {
+    background-color: black;
+    padding: 70px 0 15px 0;
+}
+#contacto h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px #d4d4d4;
+    margin-bottom: 20px;
+}
+.contain-contacto {
+    max-width: 500px;
+    margin: auto;
+}
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    background-color: transparent;
+    width: 100%;
+    padding: 12px 0;
+    margin: 10px;
+    border: .5px solid #d4d4d4;
+    text-align: center;
+    color: #d4d4d4;
+    outline: none;
+    font-family: "Monserrat", san-serif;
+}
+.bot {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.boton {
+    background-color: transparent;
+    color: #d4d4d4;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: .5px solid #d4d4d4;
+}
+/*FOOTER*/
+footer {
+    background-color: #212529;
+    color:#d4d4d4;
+    padding: 30px 0 15px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #212529;
+    color: #d4d4d4;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -25%;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 1.5rem;
+} 
+.redes-footer a {
+    background-color: black;
+    color: #d4d4d4;
+    display: inline-block;
+    border: 1px solid #d4d4d4;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 1.4rem;
+    transition: .3s;
+    margin-inline: 8px;
+}
+.redes-footer a:hover {
+    background-color: #d4d4d4;
+    color: black;
+}
+@media screen and (max-width:768px) {
+    header {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: none;
+    }
+    .nav-links {
+        position: fixed;
+        top: 79.2px;
+        right: -100%;
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    .nav-links li a {
+        color: white;
+        text-shadow: 2px 1px 0 #c11e1e;
+    }
+    .hamburger {
+        display: block; 
+    }
+    .nav-active {
+        left: 0;
+    }
+    .redes {
+        display: none;
+    }
+    #productos {
+        padding: 70px 0;
+    }
+    .gallery_title a {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .logo img {
+        width: 55px;
+    }
+    .nav-links {
+        top: 69px;
+        right: -100%;
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    .nav-links li a {
+        font-size: 1.2rem;
+        color: white;
+        text-shadow: 2px 1px 0 #c11e1e;
+    }
+    .texto h3 {
+        font-size: 2rem;
+    }
+    .texto p {
+        font-size: 1rem;
+    }
+    .fila {
+        display: flex;
+        flex-direction: column;
+    }
+    .fila .col {
+        margin-inline: auto;
+        max-width: 500px;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }    
+    #productos {
+        padding: 80px 0;
+    }
+    .contain-contacto {
+        max-width: 350px;
+        margin: auto;
+    }
+    #sucursales h2 {
+        font-size: 2.3rem;
+    } 
+    #contacto h2 {
+        font-size: 2.3rem;
+    }
+    #productos h2 {
+        font-size: 2.3rem;
+    }
+}
