@@ -79,6 +79,9 @@ nav ul li a:hover {
     animation-delay: 1.2s;
 }
 /*INICIO*/
+.banner_mobile {
+    display: none;
+}
 .slider {
     position: relative;
     width: 100%;
@@ -173,11 +176,9 @@ nav ul li a:hover {
     color: #d4d4d4;
     transition: .5s;
 }
-.fila .col p {
-    font-size: 1.2rem;
-}
 .fila .col a {
-    color: #d4d4d4;
+    color: #c11e1e;
+    text-transform: uppercase;
     text-decoration: none;
     transition: .5s;
 }
@@ -358,7 +359,7 @@ input, textarea {
     text-align: center;
     color: #d4d4d4;
     outline: none;
-    font-family: "Monserrat", san-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .bot {
     display: flex;
@@ -461,9 +462,37 @@ footer .arriba {
     }
 }
 @media screen and (max-width:480px) {
+    .banner_mobile {
+        display: block;
+        height: 100vh;
+        background-image: url(./img/4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
    
+    .title_mobile {
+        font-size: 2.8rem;
+        color: #fefeff;
+        text-shadow: 1px 1px 10px #c11e1e;
+        transition: 2s;
+    }
+    .texto_mobile {
+        font-size: 1.4rem;
+        color: #c11e1e;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px #fefeff;
+    }
     .hamburger {
         color: #fff;
+    }
+    .slider {
+        display: none;
     }
     .logo img {
         width: 55px;
