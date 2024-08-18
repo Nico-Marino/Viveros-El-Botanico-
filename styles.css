@@ -112,11 +112,6 @@ nav ul li a:hover {
     text-transform: uppercase;
     transition: 3s;
 }
-.texto h3:hover {
-    color: #c11e1e;
-    text-shadow: 1px 1px 20px white;
-    cursor: pointer;
-}
 .texto p {
     font-size: 1.5rem;
 }
@@ -333,7 +328,7 @@ nav ul li a:hover {
 /*CONTACTO*/
 #contacto {
     background-color: black;
-    padding: 70px 0 15px 0;
+    padding: 70px 0 0 0;
 }
 #contacto h2 {
     color: #fff;
@@ -427,7 +422,7 @@ footer .arriba {
     }
     .nav-links {
         position: fixed;
-        top: 79.2px;
+        top: 78.7px;
         right: -100%;
         width: 100%;
         height: 25vh;
@@ -475,18 +470,18 @@ footer .arriba {
         justify-content: center;
         align-items: center;
     }
-   
     .title_mobile {
         font-size: 2.8rem;
         color: #fefeff;
-        text-shadow: 1px 1px 10px #c11e1e;
         transition: 2s;
+        text-shadow: 0 0 15px white;
+        
     }
     .texto_mobile {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #c11e1e;
         font-weight: 600;
-        text-shadow: 1px 1px 2px #fefeff;
+        text-shadow: 0 0 15px white;
     }
     .hamburger {
         color: #fff;
@@ -498,7 +493,7 @@ footer .arriba {
         width: 55px;
     }
     .nav-links {
-        top: 69px;
+        top: 68.7px;
     }
     .nav-links li {
         margin: .5rem 0;
