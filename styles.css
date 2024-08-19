@@ -454,8 +454,8 @@ footer .arriba {
         margin: 0;
     }
     nav.responsive ul li{
-        font-size: 1.2rem;
-        padding: 35px 0;
+        font-size: 2rem;
+        padding: 40px 0;
         text-align: center;
         animation: none;
     }
@@ -496,6 +496,12 @@ footer .arriba {
         font-weight: 600;
         text-shadow: 0 0 15px white;
     }
+    nav.responsive ul li{
+        font-size: 1.5rem;
+        padding: 45px 0;
+        text-align: center;
+        animation: none;
+    }
     .slider {
         display: none;
     }
@@ -528,6 +534,8 @@ footer .arriba {
     }
     #productos h2 {
         font-size: 2.3rem;
+    }#contacto {
+        padding: 50px 0 0 0;
     }
     .contain-contacto {
         max-width: 370px;
