@@ -1,19 +1,24 @@
 //MENU
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const menuItems = document.querySelectorAll('.nav-links li');
+let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+    if (menuVisible) {
+        nav.classList.remove("responsive");
+        menuVisible = false;
+    } else {
+        nav.classList.add("responsive");
+        menuVisible = true;
+    }
+}
 
-// Mostrar y ocultar el menú hamburguesa
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-});
+function seleccionar() {
+    // Oculto el menú una vez que selecciono una opción
+    const nav = document.getElementById("nav");
+    nav.classList.remove("responsive");
+    menuVisible = false;
+}
 
-// Ocultar el menú al hacer clic en un ítem
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navLinks.classList.remove('nav-active');
-    });
-});
 
 // SLIDER
 let slideIndex = 0;

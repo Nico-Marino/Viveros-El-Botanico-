@@ -10,37 +10,44 @@ html {
     scroll-behavior: smooth;
 }
 /*ENCABEZADO*/
-header {
-    background-color: rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+.logo img {
+    width: 55px;
+    animation: bounceInLeft;
+    animation-duration: 1s;
+}
+.contenedor-header {
+    background-color: transparent;
     backdrop-filter: blur(1px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
-.logo img {
-    width: 65px;
-    animation: bounceInLeft;
-    animation-duration: 1s;
-    margin: 10px 0 0 12px;
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
 }
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-inline: 1.5rem;
-}
-nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
+.contenedor-header header nav ul li a {
+    text-align: center;
     color: #fff;
-    font-size: 1.2rem;
+    margin: 0 15px;
+    padding: 3px;
+    text-decoration: none;
+    transition: .5s;
+    font-family: "Work Sans", sans-serif;
 }
-nav ul li a:hover {
+.contenedor-header header nav ul li a:hover {
     animation: flash;
-    animation-duration: .5s;
+    animation-duration: 1s;
 }
 .redes a {
     color: #fff;
@@ -59,13 +66,6 @@ nav ul li a:hover {
     animation: flash;
     animation-duration: .5s;
 }
-.hamburger {
-    margin-right: 1rem;
-    color: #fff;
-    font-size: 1.5rem;
-    display: none;
-    cursor:pointer;
-}
 .item1 {
     animation-delay: .3s;
 }
@@ -77,6 +77,13 @@ nav ul li a:hover {
 }
 .item4 {
     animation-delay: 1.2s;
+}
+.nav-responsive {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
 }
 /*INICIO*/
 .banner_mobile {
@@ -416,36 +423,41 @@ footer .arriba {
     color: black;
 }
 @media screen and (max-width:768px) {
-    header {
-        background-color: rgba(0, 0, 0, 0.8);
-        border: none;
+    .logo img {
+        width: 55px;
+        animation: bounceInLeft;
+        animation-duration: 1s;
     }
-    .nav-links {
-        position: fixed;
-        top: 79.2px;
-        right: -100%;
+    nav {
+        display: none;
+    }
+    .nav-responsive {
+        display: block;
+        font-size: 1.4rem;
+    }
+    nav.responsive{
+        background-color: rgba(0,0,0, .8);
+        backdrop-filter: blur(1px);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 50vh;
-        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: left 0.3s ease;
     }
-    .nav-links li {
-        margin: 1rem 0;
+    nav.responsive ul{
+        display: block !important;
+        margin: 0;
     }
-    .nav-links li a {
-        color: white;
-        text-shadow: 0 0 20px white;
-        backdrop-filter: blur(500px);
-    }
-    .hamburger {
-        display: block; 
-    }
-    .nav-active {
-        left: 0;
+    nav.responsive ul li{
+        font-size: 1.2rem;
+        padding: 35px 0;
+        text-align: center;
+        animation: none;
     }
     .redes {
         display: none;
@@ -484,24 +496,8 @@ footer .arriba {
         font-weight: 600;
         text-shadow: 0 0 15px white;
     }
-    .hamburger {
-        color: #fff;
-    }
     .slider {
         display: none;
-    }
-    .logo img {
-        width: 55px;
-    }
-    .nav-links {
-        top: 68.7px;
-        height: 30vh;
-    }
-    .nav-links li {
-        margin: 1rem 0;
-    }
-    .nav-links li a {
-        font-size: 1rem;
     }
     .texto h3 {
         font-size: 2rem;
@@ -509,6 +505,12 @@ footer .arriba {
     .texto p {
         font-size: 1.2rem;
     }
+    #sucursales {
+        padding: 80px 0;
+    }
+    #sucursales h2 {
+        font-size: 2.3rem;
+    } 
     .fila {
         display: flex;
         flex-direction: column;
@@ -524,20 +526,15 @@ footer .arriba {
     #productos {
         padding: 80px 0;
     }
+    #productos h2 {
+        font-size: 2.3rem;
+    }
     .contain-contacto {
         max-width: 370px;
         margin: auto;
     }
-    #sucursales {
-        padding: 80px 0;
-    }
-    #sucursales h2 {
-        font-size: 2.3rem;
-    } 
     #contacto h2 {
         font-size: 2.3rem;
     }
-    #productos h2 {
-        font-size: 2.3rem;
-    }
+   
 }
