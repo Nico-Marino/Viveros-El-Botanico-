@@ -1,3 +1,9 @@
+let nombreUsuario = prompt ("Ingrese su nombre");
+console.log(nombreUsuario);
+
+alert("Hola " + nombreUsuario + " Bienvenido al sitio de Viveros el Botanico ")
+
+
 //MENU
 let menuVisible = false;
 //Función que oculta o muestra el menu
