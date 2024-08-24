@@ -1,19 +1,18 @@
 // Bienvenida al sitio web
-let primeraVisita = !localStorage.getItem('bienvenidaMostrada');
+do {
+    // Verifica si el usuario ya ha ingresado durante esta sesión
+    if (!sessionStorage.getItem('bienvenidaMostrada')) {
+        // Si no, muestra el mensaje de bienvenida
+        let nombreUsuario = prompt("Ingrese su nombre");
+        console.log(nombreUsuario);
 
-while (primeraVisita) {
-    // Muestra el mensaje de bienvenida
-    let nombreUsuario = prompt("Ingrese su nombre");
-    console.log(nombreUsuario);
+        alert("Hola " + nombreUsuario + "\nBienvenido a Viveros el Botánico");
 
-    alert("Hola " + nombreUsuario + "\nBienvenido a Viveros el Botánico");
+        // Guarda la información en sessionStorage para que no vuelva a mostrarse durante esta sesión
+        sessionStorage.setItem('bienvenidaMostrada', 'true');
+    }
+} while (false); // Este `false` asegura que el bucle se ejecute solo una vez
 
-    // Guarda la información en localStorage para que no vuelva a mostrarse
-    localStorage.setItem('bienvenidaMostrada', 'true');
-
-    // Asegura que el bucle no se ejecute de nuevo
-    primeraVisita = false;
-}
 //MENU
 let menuVisible = false;
 //Función que oculta o muestra el menu
