@@ -6,7 +6,7 @@ do {
         let nombreUsuario = prompt("Ingrese su nombre");
         console.log(nombreUsuario);
 
-        alert("Hola " + nombreUsuario + "\nBienvenido a Viveros el Botánico");
+        alert("Hola " + nombreUsuario + "\nBienvenido/a a Viveros el Botánico");
 
         // Guarda la información en sessionStorage para que no vuelva a mostrarse durante esta sesión
         sessionStorage.setItem('bienvenidaMostrada', 'true');
