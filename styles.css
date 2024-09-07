@@ -487,14 +487,13 @@ footer .arriba {
         font-size: 2.8rem;
         color: #fefeff;
         transition: 2s;
-        text-shadow: 0 0 15px white;
         
     }
     .texto_mobile {
         font-size: 1.2rem;
         color: #c11e1e;
         font-weight: 600;
-        text-shadow: 0 0 15px white;
+        text-shadow: .5px .5px 0 white;
     }
     nav.responsive ul li{
         font-size: 1.5rem;
