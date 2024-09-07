@@ -1,18 +1,3 @@
-// Bienvenida al sitio web
-do {
-    // Verifica si el usuario ya ha ingresado durante esta sesión
-    if (!sessionStorage.getItem('bienvenidaMostrada')) {
-        // Si no, muestra el mensaje de bienvenida
-        let nombreUsuario = prompt("Ingrese su nombre");
-        console.log(nombreUsuario);
-
-        alert("Hola " + nombreUsuario + "\nBienvenido/a a Viveros el Botánico");
-
-        // Guarda la información en sessionStorage para que no vuelva a mostrarse durante esta sesión
-        sessionStorage.setItem('bienvenidaMostrada', 'true');
-    }
-} while (false); // Este `false` asegura que el bucle se ejecute solo una vez
-
 //MENU
 let menuVisible = false;
 //Función que oculta o muestra el menu
