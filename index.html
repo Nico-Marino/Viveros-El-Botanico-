@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Viveros el Botanico</title>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./img/Logo vi.png" type="image/x-icon">
     <!--ANIMATE-->
     <link
     rel="stylesheet"
@@ -26,7 +28,7 @@
                 <ul>
                     <li class="animate__animated animate__backInDown item1"><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li class="animate__animated animate__backInDown item2"><a href="#sucursales" onclick="seleccionar()">SUCURSALES</a></li>
-                    <li class="animate__animated animate__backInDown item3"><a href="#productos" onclick="seleccionar()">PRODUCTOS</a></li>
+                    <li class="animate__animated animate__backInDown item3"><a href="./productos.html" onclick="seleccionar()">PRODUCTOS</a></li>
                     <li class="animate__animated animate__backInDown item4"><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -43,21 +45,21 @@
     <section id="inicio">
         <div class="slider">
             <div class="slide active">
-                <img src="./img/1.jpg" alt="Imagen 1">
+                <img src="./img/slider/1.jpg" alt="Imagen 1">
                 <div class="texto">
                     <h3>Viveros <br>el botánico</h2>
                     <p>Cuarenta años en el jardín de los argentinos</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="./img/4.jpg" alt="Imagen 2">
+                <img src="./img/slider/4.jpg" alt="Imagen 2">
                 <div class="texto">
                     <h3>Viveros <br>el botánico</h2>
                     <p>Cuarenta años en el jardín de los argentinos</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="./img/2.jpg" alt="Imagen 3">
+                <img src="./img/slider/2.jpg" alt="Imagen 3">
                 <div class="texto">
                     <h3>Viveros <br>el botánico</h2>
                     <p>Cuarenta años en el jardín de los argentinos</p>
@@ -109,42 +111,19 @@
             </div>
         </section>
     
-    <!--PRODUCTOS-->
-        <section id="productos">
-            <h2>PRODUCTOS</h2>
-            <div class="gallery-container">
-                <div class="gallery_item">
-                    <img src="./img/Plantas.jpg" alt="" class="gallery_img">
-                    <h2 class="gallery_title"><a href="./pages/plantas.html">Plantas</a></h2>
-                </div>
-                <div class="gallery_item">
-                    <img src="./img/Jardineria.jpg" alt="" class="gallery_img">
-                    <h2 class="gallery_title"><a href="./pages/jardineria.html">jardineria</a></h2>
-                </div>
-                <div class="gallery_item">
-                    <img src="./img/semilla.jpg" alt="" class="gallery_img">
-                    <h2 class="gallery_title"><a href="./pages/semillas.html">semillas</a></h2>
-                </div>
-                <div class="gallery_item">
-                    <img src="./img/Macetas.jpg" alt="" class="gallery_img">
-                    <h2 class="gallery_title"><a href="./pages/macetas.html">Macetas</a></h2>
-                </div>
-            </div>
-        </section>
-    
     <!--CONTACTO-->
         <section id="contacto">
             <h2>CONTACTO</h2> 
             <div class="contain-contacto">
-                <div class="formulario">
+                <div id="formulario" class="formulario">
                     <form action="">
-                        <input type="text" placeholder="NOMBRE">
-                        <input type="email" placeholder="CORREO ELECTRÓNICO">
+                        <input type="text" placeholder="NOMBRE" required>
+                        <input type="email" placeholder="CORREO ELECTRÓNICO" required>
                         <input type="text" placeholder="TELÉFONO">
                         <textarea name="" id="" cols="30" rows="7" placeholder="DEJANOS TU MENSAJE"></textarea>
                         <div class="bot">
-                            <button class="boton" >ENVIAR</button>
-                            <button class="boton" >BORRAR</button>
+                            <button type="submit" class="boton" >ENVIAR</button>
+                            <button type="reset" class="boton" >BORRAR</button>
                         </div>
                     </form>
                 </div>
@@ -162,7 +141,7 @@
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </footer>
-<script src="./script.js"></script>
+<script src="./js/script.js"></script>
 </section>
 </body>
 </html>

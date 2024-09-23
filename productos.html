@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./img/Logo vi.png" type="image/x-icon">
+    <!--ANIMATE-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="body-productos">
+    <div class="boton-volver">
+        <a href="../index.html#productos">VOLVER A LA PÁGINA PRINCIPAL</a>
+    </div>
+<main class="main">
+<section class="container-carrito">
+    <h2 class="titulo">CARRITO <i class="fa-solid fa-cart-shopping"></i></h2>
+    <div class="carrito">
+        <div id="carrito-vacio" class="carrito-vacio">
+            <h4>Tu carrito está vacío <i class="bi bi-emoji-frown"></i></h4>
+        </div>
+        <div class="carrito-productos ocultar" id="carrito-productos">
+            <!--Esto se va a rellenar con Javascript-->
+        </div>
+        <div class="carrito-total">
+            <h2>Total: <span id="carrito-total">$0</span></h2>
+        </div>
+        <div id="mensaje-compra" class="ocultar"></div>
+    </div>
+</section>
+<section class="container">
+    <div class="form_input">
+        <label class="filtar"> Filtar productos por:
+            <select name="type-of-user">
+                <option value="all">PLANTAS</option>
+                <option value="all">MACETAS</option>
+                <option value="all">JARDINERÍA</option>
+                <option value="all">SEMILLAS</option>
+            </select>
+        </label>
+    </div>
+    <h2 class="titulo-productos">Todos los productos</h2>
+    <div class="contenedor" id="contenedor">
+        <!--Esto se va a rellenar con Javascript-->
+    </div>
+</section>
+</main>
+<!--FOOTER-->
+<footer>
+    <a href="./productos.html" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <div class="redes-footer">
+        <a href="https://www.instagram.com/viveroselbotanicosrl/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ViveroElBotanico1/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</footer>
+    <!--JAVASCRIPT-->
+    <script src="./js/productos.js"></script>
+</body>
+</html>
