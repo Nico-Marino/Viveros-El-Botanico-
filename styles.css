@@ -293,6 +293,7 @@ html {
     padding: .25rem;
     border-radius: .25rem;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 .ocultar {
     display: none;

@@ -2,7 +2,7 @@
 // Inventario
 const productos = [
     // Categoría Plantas
-    { id: 1, nombre: 'Jazmin', precio: 19499, stock: 5, categoria: {nombre:'Plantas', id:'plantas'}, img: "./img/plantas/jazmin.jpg" },
+    { id: 1, nombre: 'Jazmín', precio: 19499, stock: 5, categoria: {nombre:'Plantas', id:'plantas'}, img: "./img/plantas/jazmin.jpg" },
     { id: 2, nombre: 'Lavanda', precio: 3900, stock: 0, categoria: {nombre:'Plantas', id:'plantas'}, img: "./img/plantas/lavanda.jpg" },
     { id: 3, nombre: 'Rosa', precio: 12500, stock: 1, categoria: {nombre:'Plantas', id:'plantas'}, img: "./img/plantas/Rosa.jpg" },
     { id: 4, nombre: 'Fittonia', precio: 6500, stock: 7, categoria: {nombre:'Plantas', id:'plantas'}, img: "./img/plantas/fittonia.jpg" },
@@ -40,9 +40,10 @@ const productos = [
     { id: 30, nombre: 'Salteña fibrocemento', precio: 8500, stock: 9, categoria: { nombre:'macetas', id: 'macetas'}, img: "./img/macetas/Macetas1.jpg"},
     { id: 31, nombre: 'Piramidal esmaltado', precio: 8500, stock: 5,categoria: { nombre:'macetas', id: 'macetas'},img: "./img/macetas/piramidalesmaltado.png" },
     { id: 32, nombre: 'Hexagonal con plato', precio: 8500, stock: 6, categoria: { nombre:'macetas', id: 'macetas'}, img: "./img/macetas/hexagonalconplato.png"},
-    { id: 33, nombre: 'Cubo fibrocemento', precio: 4500, stock: 0, categoria: { nombre:'macetas', id: 'macetas'}, img: "./img/macetas/cubofibrocemento.png" },
+    { id: 33, nombre: 'Cubo fibrocemento', precio: 4500, stock: 3, categoria: { nombre:'macetas', id: 'macetas'}, img: "./img/macetas/cubofibrocemento.png" },
     { id: 34, nombre: 'Esfera le parc', precio: 6500, stock: 0, categoria: { nombre:'macetas', id: 'macetas'}, img: "./img/macetas/esferaleparc.png" },
-    { id: 35, nombre: 'Andina lisa', precio: 4500, stock: 0,categoria: { nombre:'macetas', id: 'macetas'},img: "./img/macetas/andinalisa.png" },
+    { id: 35, nombre: 'Andina lisa', precio: 4500, stock: 3,categoria: { nombre:'macetas', id: 'macetas'},img: "./img/macetas/andinalisa.png" },
+    { id: 35, nombre: 'Conífera', precio: 7500, stock: 0,categoria: { nombre:'macetas', id: 'macetas'},img: "./img/macetas/conifera.jpg" },
 ];
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -128,7 +129,7 @@ function actualizarCarrito() {
             //Botón eliminar
             let button = document.createElement("button");
             button.classList.add("carrito-producto-boton");
-            button.innerText = "X";
+            button.innerText = "❌";
             button.addEventListener("click", () => {
                 carrito = carrito.filter(item => item.id !== producto.id);//Elimina el producto del carrito
                 actualizarCarrito(); //Actualiza la parte visual del carrito
@@ -175,7 +176,8 @@ function agregarAlcarrito(producto) {
             Swal.fire({
                 title: 'Stock insuficiente',
                 text: 'No hay suficiente stock de este producto',
-                icon: 'warning',
+                iconHtml: '<i class="bi bi-database-dash"></i>',
+                iconColor: 'white',
                 confirmButtonText: 'Aceptar',
                 confirmButtonColor: 'black'
             });
@@ -186,10 +188,11 @@ function agregarAlcarrito(producto) {
         } else {
             Swal.fire({
                 title: 'Producto no disponible',
-                text: 'No hay stock de este producto',
-                icon: 'error',
+                text: 'Este producto se encuentra momentáneamente  agotado',
+                iconHtml: '<i class="bi bi-database-x"></i>',
+                iconColor: 'white',
                 confirmButtonText: 'Aceptar',
-                confirmButtonColor: 'black'
+                confirmButtonColor: 'black',
             });
         }
     }
@@ -209,6 +212,7 @@ const finalizarCompra = () => {
         confirmButtonText: 'Aceptar',
         confirmButtonColor: 'black',
         iconHtml: '<i class="bi bi-emoji-smile-fill"></i>',
+        iconColor: 'white',
     });
 };
 
@@ -219,9 +223,10 @@ document.getElementById("sweetAlert").addEventListener("click", () => {
         Swal.fire({
             title: 'Carrito vacío',
             text: 'No puedes finalizar tu compra porque el carrito está vacío.',
-            icon: 'warning',
+            iconHtml: '<i class="bi bi-cart-x"></i>',
             confirmButtonText: 'Aceptar',
             confirmButtonColor: 'black',
+            iconColor: 'white',
         });
     } else {
         // Si el carrito tiene productos, se procede con la compra
@@ -233,6 +238,8 @@ document.getElementById("sweetAlert").addEventListener("click", () => {
             confirmButtonText: 'Aceptar',
             cancelButtonText: 'Cancelar',
             confirmButtonColor: 'black',
+            iconHtml: '<i class="bi bi-check-circle"></i>',
+            iconColor: 'white',
         }).then((result) => {
             if (result.isConfirmed) {
                 finalizarCompra();
