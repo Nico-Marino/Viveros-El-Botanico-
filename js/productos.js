@@ -198,46 +198,47 @@ function agregarAlcarrito(producto) {
 }
 
 
-//***** SWEETALERT *****//
-
-const sweetAlert = document.querySelector("#sweetAlert");
-
-sweetAlert.addEventListener("click", () => {
-    Swal.fire({
-        title: 'Gracias por su compra',
-        text: 'Presione aceptar para finalizarla',
-        confirmButtonText: 'Aceptar',
-        showCancelButton: 'true',
-        cancelButton: 'cancelar',
-        cancelButtonColor: 'black', 
-        cancelButtonText: 'Cancelar',
-        iconColor: 'white',
-        iconHtml: '<i class="bi bi-emoji-smile-fill"></i>',
-        confirmButtonColor: 'black',
-    
-    })
-})
-
-//Limpia el carrito una vez finalizada la compra
+// Función para limpiar el carrito una vez finalizada la compra
 const finalizarCompra = () => {
     carrito = [];
     actualizarCarrito();
     localStorage.removeItem("carrito"); // Limpia el localStorage
-};
-
-sweetAlert.addEventListener("click", () => {
     Swal.fire({
         title: 'Gracias por su compra',
         text: 'Presione aceptar para finalizarla',
         confirmButtonText: 'Aceptar',
-        showCancelButton: true,
-        cancelButtonText: 'Cancelar',
         confirmButtonColor: 'black',
         iconHtml: '<i class="bi bi-emoji-smile-fill"></i>',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            finalizarCompra();
-        }
     });
+};
+
+// Evento al hacer clic en el botón de finalizar compra
+document.getElementById("sweetAlert").addEventListener("click", () => {
+    // Validar si el carrito está vacío
+    if (carrito.length === 0) {
+        Swal.fire({
+            title: 'Carrito vacío',
+            text: 'No puedes finalizar tu compra porque el carrito está vacío.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: 'black',
+        });
+    } else {
+        // Si el carrito tiene productos, se procede con la compra
+        Swal.fire({
+            title: 'Estás a un paso de terminar',
+            text: 'Presiona aceptar para finalizar tu compra.',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: 'black',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                finalizarCompra();
+            }
+        });
+    }
 });
+
 
