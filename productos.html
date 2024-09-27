@@ -27,31 +27,40 @@
     <h2 class="titulo">CARRITO <i class="fa-solid fa-cart-shopping"></i></h2>
     <div class="carrito">
         <div id="carrito-vacio" class="carrito-vacio">
-            <h4>Tu carrito está vacío <i class="bi bi-emoji-frown"></i></h4>
+            <h4>Tu carrito está vacío</h4>
         </div>
         <div class="carrito-productos ocultar" id="carrito-productos">
             <!--Esto se va a rellenar con Javascript-->
         </div>
         <div class="carrito-total">
             <h2>Total: <span id="carrito-total">$0</span></h2>
+            <button id="sweetAlert" class="finalizar">Finalizar compra</button>
         </div>
         <div id="mensaje-compra" class="ocultar"></div>
     </div>
 </section>
 <section class="container">
-    <div class="form_input">
-        <label class="filtar"> Filtar productos por:
-            <select name="type-of-user">
-                <option value="all">PLANTAS</option>
-                <option value="all">MACETAS</option>
-                <option value="all">JARDINERÍA</option>
-                <option value="all">SEMILLAS</option>
-            </select>
-        </label>
-    </div>
-    <h2 class="titulo-productos">Todos los productos</h2>
+    <ul class="menu-productos">
+        <li>
+            <button id="todos" class="boton-menu boton-categoria active">Todos los productos</button>
+        </li>
+        <li>
+            <button id="plantas" class="boton-menu boton-categoria">Plantas</button>
+        </li>
+        <li>
+            <button id="jardineria" class="boton-menu boton-categoria">Jardinería</button>
+        </li>
+        <li>
+            <button id="macetas" class="boton-menu boton-categoria">Macetas</button>
+        </li>
+        <li>
+            <button id="semillas" class="boton-menu boton-categoria">Semillas</button>
+        </li>
+    </ul>
+    <h2 id="titulo-principal" class="titulo-principal">Todos los productos</h2>
     <div class="contenedor" id="contenedor">
         <!--Esto se va a rellenar con Javascript-->
+        <h2 class="titulo-principal">Todos los productos</h2>
     </div>
 </section>
 </main>
@@ -66,7 +75,10 @@
         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 </footer>
+    <!--SWEETALERT2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--JAVASCRIPT-->
+    <script src="./js/script.js"></script>
     <script src="./js/productos.js"></script>
 </body>
 </html>
