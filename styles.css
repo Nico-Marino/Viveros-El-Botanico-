@@ -226,7 +226,7 @@ html {
 }
 .menu-productos {
     display: flex;
-    margin: 2rem;
+    margin: 1rem;
     gap: 2rem;
 }
 .menu-productos li {
@@ -246,7 +246,7 @@ html {
     animation-duration: 1s;
 }
 .boton-menu.active {
-    color: #ADB5BD;
+    color: #A3B18A;
     text-decoration: underline;
     font-weight: 700;
 }
@@ -254,14 +254,28 @@ html {
 /*Contenedor productos carrito*/
 .titulo {
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     text-align: center;
+}
+.btn-ver {
+    color: #fff;
+    margin-bottom: .5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn-ver:hover {
+    animation: flash;
+    animation-duration: 1s;
 }
 .titulo-principal {
     font-size: 1.5rem;
     color: #d4d4d4;
     text-align: start;
-    margin-bottom: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2.2rem;
     text-transform: uppercase;
     text-shadow: 0 0 10px white;
 }
@@ -290,10 +304,8 @@ html {
     background-color: transparent;
     color: #fff;
     border: 0;
-    padding: .25rem;
-    border-radius: .25rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .ocultar {
     display: none;
@@ -302,6 +314,7 @@ html {
     border-radius: 10px;
     padding: .5rem;
     margin-top: .7rem;
+    margin-bottom: 3rem;
     border: none;
     background-color: #fefeff;
     color: #212529;
@@ -512,6 +525,19 @@ footer .arriba {
     .redes {
         display: none;
     }
+    .titulo-principal {
+        margin-top: 1rem;
+        margin-bottom: 2.2rem;
+    }
+    .btn-ver {
+        font-size: 1.3rem;
+    }
+    .boton-menu {
+        font-size: 1rem;
+    }
+    .boton-volver a {
+        font-size: 1rem;
+    }
 }
 @media screen and (max-width:480px) {
     .banner_mobile {
@@ -587,5 +613,23 @@ footer .arriba {
     .carrito-producto {
         font-size: .8rem;
         color: #fff;
+    }
+    .carrito-producto-boton {
+        font-size: .7rem;
+    }
+    .titulo-principal {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+    }
+    .btn-ver {
+        font-size: 1rem;
+    }
+    .boton-menu {
+        font-size: .8rem;
+        text-align: center;
+    }
+    .boton-volver a {
+        font-size: 1rem;
     }
 }

@@ -23,23 +23,8 @@
         <a href="./index.html">VOLVER A LA PÁGINA PRINCIPAL</a>
     </div>
 <main class="main">
-<section class="container-carrito">
-    <h2 class="titulo">CARRITO <i class="fa-solid fa-cart-shopping"></i></h2>
-    <div class="carrito">
-        <div id="carrito-vacio" class="carrito-vacio">
-            <h4>Tu carrito está vacío</h4>
-        </div>
-        <div class="carrito-productos ocultar" id="carrito-productos">
-            <!--Esto se va a rellenar con Javascript-->
-        </div>
-        <div class="carrito-total">
-            <h2>Total: <span id="carrito-total">$0</span></h2>
-            <button id="sweetAlert" class="finalizar">Finalizar compra</button>
-        </div>
-        <div id="mensaje-compra" class="ocultar"></div>
-    </div>
-</section>
 <section class="container">
+    <a class="btn-ver" href="#verCarrito">Ver Carrito</a>
     <ul class="menu-productos">
         <li>
             <button id="todos" class="boton-menu boton-categoria active">Todos los productos</button>
@@ -61,6 +46,22 @@
     <div class="contenedor" id="contenedor">
         <!--Esto se va a rellenar con Javascript-->
         <h2 class="titulo-principal">Todos los productos</h2>
+    </div>
+</section>
+<section id="verCarrito" class="container-carrito">
+    <h2 class="titulo"><i class="fa-solid fa-cart-shopping"></i> Carrito <span id="numerito">0</span></h2>
+    <div class="carrito">
+        <div id="carrito-vacio" class="carrito-vacio">
+            <h4>Tu carrito está vacío</h4>
+        </div>
+        <div class="carrito-productos ocultar" id="carrito-productos">
+            <!--Esto se va a rellenar con Javascript-->
+        </div>
+        <div class="carrito-total">
+            <h2>Total: <span id="carrito-total">$0</span></h2>
+            <button id="sweetAlert" class="finalizar">Finalizar compra</button>
+        </div>
+        <div id="mensaje-compra" class="ocultar"></div>
     </div>
 </section>
 </main>
